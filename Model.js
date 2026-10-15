@@ -323,8 +323,8 @@ function ignoreConfirmation(ids, report) {
   var list = itemIdList(report, ids, "detection")
   if (!list) return null
   var one = list.length === 1
-  var lines = one ? [detectionItem(report, list[0]).text.replace("\n", ": ")]
-                  : list.slice(0, 40).map(function(id) { return detectionItem(report, id).text.replace("\n", ": ") })
+  var lines = one ? [detectionItem(report, list[0]).text.replace(/\n/g, ": ")]
+                  : list.slice(0, 40).map(function(id) { return detectionItem(report, id).text.replace(/\n/g, ": ") })
   if (list.length > 40) lines.push("… and " + (list.length - 40) + " more")
   return { title: one ? "Mark this as a false positive?" : "Mark " + list.length + " files as false positives?",
            lines: lines.concat([
