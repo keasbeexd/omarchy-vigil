@@ -1,3 +1,5 @@
+## This repo has been archived as the scope has gotten to large for my expertise.
+
 # Vigil - Security Suite
 
 A security suite for [Omarchy](https://omarchy.org): one lighthouse in the bar,
